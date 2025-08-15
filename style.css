@@ -1,0 +1,237 @@
+:root{
+    --grey: #3d393b;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0 /0.5);
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: "Work Sans", sans-serif;
+    min-height: 2000px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/FTR_2064new.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /* filter: grayscale(); */
+}
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero h1, .hero h3, .hero p{
+    text-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 7rem;
+
+}
+
+.hero h4{
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+.hero a {
+    color: var(--grey);
+    background-color: white;
+}
+.hero a:hover{
+    background-color: var(--grey);
+    color: white;
+}
+
+.countdown {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 30px 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+.countdown .unit {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 60px;
+}
+
+.countdown .num {
+  font-size: 22px;
+  font-weight: bold;
+  color:var(--grey); /* warna utama */
+}
+
+.countdown .label {
+  font-size: 18px;
+  color: #555;
+}
+
+.home {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background-color: #fdf6f0;
+  
+}
+
+
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 3.5vh;
+  color: #0a0a0a;
+}
+
+.fotomanten{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* rata tengah */
+    align-items: center;     /* sejajarkan vertikal */
+    gap: 20px;
+}
+.foto {
+    width: 500px;     /* lebar foto */
+    height: 500px;    /* tinggi foto */
+
+    border-radius: 10%; /* bentuk bulat */
+}
+
+.pengantin-container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+.pengantin {
+        max-width: 300px;
+    }
+.nama {
+        font-size: 2.5rem;
+        font-family: "Great Vibes", cursive;
+        font-weight: bold;
+        color: #2b5d69;
+    }
+.deskripsi {
+        font-size: 1.1rem;
+        color: gray;
+    }
+.miring {
+        font-style: italic;
+    }
+
+.waktuacara{
+    padding-top: 5vh;
+}
+
+.acara {
+    /* Hilangkan kotak */
+    padding: 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto; 
+    font-family: 'Segoe UI', sans-serif;
+
+    /* Layout vertikal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.acara h2 {
+    color: #a0522d;
+    margin-bottom: 10px;
+}
+
+.jadwal {
+    padding: 5px;
+    width: 100%;
+    max-width: 560px;
+}
+
+.acara .jadwal h3 {
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+footer {
+        background-color: #2b5d69;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        margin-top: auto; /* Biar selalu di bawah */
+    }
+
+
+
+
+/* Media Query */
+/* laptop */
+@media (max-width: 992px){
+    html{
+       font-size: 75% ; 
+    }
+    .foto{
+        width: 75% ;
+        height: 75% ;
+    }
+    .fotomanten{
+        padding-top: 2vh;
+    }
+
+}
+/* tablet */
+@media (max-width: 768px){
+    html{
+       font-size: 65% ; 
+    }
+    .foto{
+        width: 65% ;
+        height: 65% ;
+    }
+    .fotomanten{
+        padding-top: 2vh;
+    }
+    .acara {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* mobile phone */
+@media (max-width: 576px){
+    html{
+       font-size: 60% ; 
+    }
+    .foto{
+        width: 45% ;
+        height: 45% ;
+    }
+    .fotomanten{
+        padding-top: 2vh;
+    }
+    .container{
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
+    
+}
